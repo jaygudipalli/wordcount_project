@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result count</title>
+</head>
+<body>
+     <form action="{% url 'home' %}">
+             <button type="submit">Start Again</button>
+    </form>
+    <br>
+    <b>Entered text: </b>{{entered_text}}
+    <br />
+    <b>There are {{count}} words in the text</b>
+    <br />
+        {% for word,count_total in sorted_dictionary %}
+
+        {{word }}:{{ count_total }}<br />
+
+        {% endfor %}
+
+</body>
+</html>
